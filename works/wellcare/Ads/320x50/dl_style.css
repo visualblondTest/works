@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#loader-container {
+    width: 320px;
+    height: 50px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: absolute;
+    background: #fff;
+    z-index: 10000;
+    border: 1px solid #000;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -o-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    background: #fff;
+}
+
+#banner_content{
+    display: none;
+}
+
+.banner {
+	font-family: Arial, Helvetica, sans-serif;
+       width: 320px;
+        height: 50px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    border:1px solid #939598;
+    overflow:hidden;
+    display:block !important;
+    background: #eb7b27;
+}
+strong {
+    font-weight: bold;
+}
+sup {
+    font-size: 6px;
+    position: relative;
+    top: -0.8em;
+    left: -2px;
+}
+.positionAb {
+    position: absolute;
+}
+.aC {
+    left:0;
+    right:0;
+    margin: 0 auto;
+}
+
+#clickTag{
+   width: 320px;
+        height: 50px;
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+    #loader-container .circle {
+      -webkit-animation: spin 0.5s linear infinite;
+              animation: spin 0.5s linear infinite;
+      border: 5px solid #ddd;
+      border-bottom-color: #333;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      left: 50%;
+      margin-left: -12.5px;
+      margin-top: -12.5px;
+      position: absolute;
+      -webkit-transition: all 0.7s ease-in-out;
+      -o-transition: all 0.7s ease-in-out;
+      transition: all 0.7s ease-in-out;
+ }
+  
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg); }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg); } }
+  
+  @keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg); }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg); } }
+
+
+#background {
+   /* background: url("img/BG.jpg");*/
+      background-color: #eb7b27;
+    }
+
+
+
+
+
+#BG {
+   /* background: url("img/BG.jpg");*/
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 637px;
+      height: 642px;
+      top: -276px;
+      left: 46px;
+      transform-origin: 0px 0px 0px;
+
+    }
+
+    #Eyes-Bottom {
+   /* background: url("img/Eyes-Bottom.png");*/
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 637px;
+      height: 642px;
+      top: -276px;
+      left: 46px;
+      transform-origin: 0px 0px 0px;
+
+    }
+
+    #Eyes-Top {
+   /* background: url("img/Eyes-Top.png");*/
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 637px;
+      height: 642px;
+      top: -276px;
+      left: 46px;
+      transform-origin: 0px 0px 0px;
+
+    }
+
+
+
+
+
+     #Text-1 {
+    background: url("img/Text-1.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0px;
+      width: 320px;
+      height: 50px;
+      top: -2px;
+    }
+
+     #Text-2 {
+    background: url("img/Text-2.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0px;
+      width: 320px;
+      height: 50px;
+      top: -2px;
+    }
+
+    #CTA {
+   /* background: url("img/CTA.png");*/
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 11px;
+      width: 73.7px;
+      height: 29.13px;
+      left: 230px;
+    cursor: pointer;
+    cursor: hand;
+    }
+
+    #CTA img, #Text-1 img, #Text-2 img {
+      width: 100%;
+      height: 100%;
+    }
+    
+    #Logo {
+      background: url("img/Logo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 72.23px;
+      height: 21.09px;
+      top: 15.06px;
+      left: 140px;
+    }
