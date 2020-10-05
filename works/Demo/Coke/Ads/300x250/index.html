@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl92615cd045c836dff680517d127398b4"/>
+<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl8ebe8e4132ed5e7f787630309e030200"/>
   <meta charset="utf-8">
   <meta name="generator" content="Google Web Designer 9.0.1.0902">
   <meta name="template" content="Banner 3.0.0">
@@ -424,7 +424,11 @@ e.B=function(a){var b=this.getAttribute("exit-id"),d=this.getAttribute("product-
        * Handles the event that is dispatched after the Ad has been
        * initialized and before the default page of the Ad is shown.
        */
-      function handleAdInitialized(event) {}
+      function handleAdInitialized(event) {
+        
+        tl_Global.restart();
+        
+      }
 
       window.addEventListener('DOMContentLoaded',
         handleDomContentLoaded, false);
