@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl1511d5a764ddb12f8175b08966a05277"/>
+<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJlb32d9ae0232bda8443903c5169dcf868"/>
   <meta charset="utf-8">
   <meta name="generator" content="Google Web Designer 9.0.1.0902">
   <meta name="template" content="Banner 3.0.0">
@@ -411,7 +411,9 @@ e.B=function(a){var b=this.getAttribute("exit-id"),d=this.getAttribute("product-
       brush.src = 'brush.png';
 
       canvas.addEventListener('mousedown', handleMouseDown, false);
+      canvas.addEventListener('touchstart', handleMouseDown, false);
       canvas.addEventListener('mouseover', handleMouseDown, false);
+
       canvas.addEventListener('mousemove', handleMouseMove, false);
       canvas.addEventListener('touchmove', handleMouseMove, false);
       canvas.addEventListener('mouseup', handleMouseUp, false);
