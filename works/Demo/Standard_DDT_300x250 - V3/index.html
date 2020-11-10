@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Banner</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="ad.size" content="width=300,height=250">
+        <meta name="format-detection" content="telephone=no"/>
+    <style>
+        *{margin:0;padding:0;}
+        div{position:absolute; }
+        #loader{width:300px;height:250px;text-align:center;}
+        .loader{position:absolute;top:30%;margin:0 auto;left:0;right:0;}
+    </style>
+    <script type="text/javascript"> 
+        var clickTag="";
+    </script>
+	</head>
+    <body>
+    <div id="loader"><img src='ring.svg' class='loader'></div>
+    <div class="banner" id="banner" style="display: none">
+        <div id="video-container">
+            <video id="video" width="300" height="250">
+              <source src="video/300x250_1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="card" class="size">
+            <div id="bg-card"></div>
+
+
+            <div id="monja-container">
+                <div id="clouds" class="positionAb"><img src="img/clouds.jpg"></div>
+                <div id="bg2" class="positionAb"><img src="img/bg2.png"></div>
+                <div id="fogint" class="positionAb"><img src="img/fog.png"></div>
+                <div id="fogint2" class="positionAb"><img src="img/fog.png"></div>
+
+                <div id="bg" class="positionAb"><img src="img/bg.png"></div>
+
+                <div id="woman" class="positionAb">
+                    <div id="habit" class="positionAb"><img src="img/habit.png"></div>
+                    <div id="nun" class="positionAb"><img src="img/nun.png"></div>
+                    <div id="cruz" class="positionAb"><img src="img/cruz.png"></div>
+                    <div id="arm" class="positionAb"><img src="img/arm.png"></div>
+                    <div id="soga" class="positionAb"><img src="img/soga.png"></div>
+                </div>
+
+            </div>
+
+                <div id="dust" class="positionAb"><img src="img/dust.png"></div>
+
+
+
+
+            <div id="logos" class="size"></div>
+            <div id="cta" class="size"><img src="img/cta.png"></div>
+
+        <svg width="300" height="250" viewbox="0 0 300 250" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <filter id="blur1" height="100%" width="100%" x="0" y="0" color-interpolation-filters="sRGB">
+                    <fegaussianblur in="SourceGraphic" stddeviation="5 5" />
+                </filter>
+                <filter id="blur2" height="100%" width="100%" x="0" y="0" color-interpolation-filters="sRGB">
+                    <fegaussianblur in="SourceGraphic" stddeviation="5 5" />
+                </filter>
+                <filter id="blur3" height="100%" width="100%" x="0" y="0" color-interpolation-filters="sRGB">
+                    <fegaussianblur in="SourceGraphic" stddeviation="5 5" />
+                </filter>
+                <filter id="blur4" height="100%" width="100%" x="0" y="0" color-interpolation-filters="sRGB">
+                    <fegaussianblur in="SourceGraphic" stddeviation="5 5" />
+                </filter> 
+            </defs>
+            <image id="logos-end_1" class="logos-end" width="300" height="250" filter="url(#blur1)" xlink:href="img/logos-end_1.png" />
+            <image id="logos-end_2" class="logos-end" width="300" height="250" filter="url(#blur2)" xlink:href="img/logos-end_2.png" />
+            <image id="logos-end_3" class="logos-end" width="300" height="250" filter="url(#blur3)" xlink:href="img/logos-end_3.png" />
+            <image id="logos-end_4" width="300" height="250" filter="url(#blur4)" xlink:href="img/logos-end_4.png" />
+        </svg> 
+        </div>
+    	<div id="play-btn" class="size"></div>
+        <div id="btn-exit" class="size"></div>
+        <div id="replay-btn" class="size"></div>
+        <div id="sound-on"></div>
+        <div id="sound-off"></div>
+	</div>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,439 @@
+
+.banner {
+    width:300px;
+    height:250px;
+    border:1px solid #333;
+    background:#fff;
+    overflow:hidden;
+    display:block !important;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+#loader-container {
+    display:none;
+}
+
+#btn-exit{
+    width:100%;
+    height:100%;   
+    cursor:pointer;
+    display:none;
+    opacity:0;
+}
+
+.size{
+    top:-1px;
+    left:-1px;
+    width:300px;
+    height:250px;
+}
+
+#copy-1{
+    background:url(../img/copy01.png);
+    background-size:contain;
+    opacity:0;
+}
+
+#card{
+/*    background:url(../img/sequence/monja1.jpg);
+    background-size:contain;*/
+}
+
+#bg-card{
+    width: 250px;
+    height: 670px;
+    top: 1px;
+    left: -140px;
+  /*  background:url(../img/sequence/monja1.jpg);  */
+    background-size:contain;
+}
+
+#video-container{
+    top:0;
+    left:0;
+}
+
+#replay-btn{
+    width:40px;
+    height:40px;
+    left: 255px;
+    background:url(../img/replay.png);
+    background-size:contain;
+    cursor:pointer;
+    display:none;
+    opacity:0;
+}
+
+
+
+#dust{
+    width: 300px;
+    height: 250px;
+    top: 0px;
+    left: 0px;
+    opacity: 0.2;
+}
+
+
+#dust img{
+    width: 615px;
+    height: 250px;
+    top: 0px;
+    left: 0px;
+}
+
+.monja{
+    width: 250px;
+    height: 670px;
+    top: 1px;
+    left: -140px;
+    background-size:contain;
+    opacity:0;
+}
+
+#logos{
+    background:url(../img/logos.png);
+    background-size:contain;
+}
+
+#logos-end_1{
+    background:url(../img/logos-end_1.png);
+    background-size:contain;
+    opacity: 0;
+}
+
+#logos-end_2{
+    background:url(../img/logos-end_2.png);
+    background-size:contain;
+    opacity: 0;
+}
+
+#logos-end_3{
+    background:url(../img/logos-end_3.png);
+    background-size:contain;
+    opacity: 0;
+}
+
+#logos-end_4{
+    background:url(../img/logos-end_4.png);
+    background-size:contain;
+    opacity:0;
+}
+
+.logos-end{
+    opacity:0;
+}
+
+#sound-on{
+    top:3px;
+    left:274px;
+    width:22px;
+    height:25px;
+    background:url(../img/soundon.png);
+    cursor:pointer;
+    background-size:contain;
+    display:none;
+}
+
+#sound-off{
+    top:3px;
+    left:274px;
+    width:22px;
+    height:25px;
+    background:url(../img/soundoff.png);
+    cursor:pointer;
+    background-size:contain;
+    display:none;
+}
+
+#play-btn{
+    cursor:pointer;
+}
+
+svg {
+    position: absolute;
+}
+
+#fog {
+    width: 300px;
+    height: 250px;
+    opacity: 0.8;
+}
+
+.fogwrapper {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  -webkit-filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+  filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+}
+#foglayer_01, #foglayer_02, #foglayer_03 {
+  height: 200%;
+  position: absolute;
+  width: 100%;
+}
+#foglayer_01 .image01, #foglayer_01 .image02,
+#foglayer_02 .image01, #foglayer_02 .image02,
+#foglayer_03 .image01, #foglayer_03 .image02 {
+  float: left;
+  height: 100%;
+  width: 100%;
+}
+#foglayer_01 {
+  -webkit-animation: foglayer_01_opacity 15s linear infinite, foglayer_moveme 15s linear infinite;
+  -moz-animation: foglayer_01_opacity 15s linear infinite, foglayer_moveme 15s linear infinite;
+  animation: foglayer_01_opacity 15s linear infinite, foglayer_moveme 15s linear infinite;
+}
+#foglayer_02, #foglayer_03 {
+  -webkit-animation: foglayer_02_opacity 13s linear infinite, foglayer_moveme 13s linear infinite;
+  -moz-animation: foglayer_02_opacity 13s linear infinite, foglayer_moveme 13s linear infinite;
+  animation: foglayer_02_opacity 13s linear infinite, foglayer_moveme 13s linear infinite;
+}
+
+/* ---------- Moving Fog ---------- */
+/*
+  'size: cover' || 'size: 100%'; results remain the same
+  'attachment: scroll' can be added or removed; results remain the same
+  'attachment: fixed' causing unexpected results in Chrome
+  'repeat-x' || 'no-repeat'; results remain the same
+*/ 
+#foglayer_01 .image01, #foglayer_01 .image02 {
+  background: url("../img/fog.png") center center/cover no-repeat transparent;
+}
+#foglayer_02 .image01, #foglayer_02 .image02,
+#foglayer_03 .image01, #foglayer_03 .image02{
+  background: url("../img/fog.png") center center/cover no-repeat transparent;
+}
+
+/* ---------- Keyframe Layer 1 ---------- */
+@-webkit-keyframes foglayer_01_opacity {
+  0% { opacity: .0; }
+  22% { opacity: .4; }
+  40% { opacity: .5; }
+  58% { opacity: .4; }
+  80% { opacity: .2; }
+  100% { opacity: .0; }
+}
+@-moz-keyframes foglayer_01_opacity {
+  0% { opacity: .0; }
+  22% { opacity: .4; }
+  40% { opacity: .5; }
+  58% { opacity: .4; }
+  80% { opacity: .2; }
+  100% { opacity: .0; }
+}
+@-o-keyframes foglayer_01_opacity {
+  0% { opacity: .0; }
+  22% { opacity: .4; }
+  40% { opacity: .5; }
+  58% { opacity: .4; }
+  80% { opacity: .2; }
+  100% { opacity: .0; }
+}
+@keyframes foglayer_01_opacity {
+  0% { opacity: .0; }
+  22% { opacity: .4; }
+  40% { opacity: .5; }
+  58% { opacity: .4; }
+  80% { opacity: .2; }
+  100% { opacity: .0; }
+}
+/* ---------- Keyframe Layer 2 ---------- */
+@-webkit-keyframes foglayer_02_opacity {
+  0% { opacity: .0; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .4; }
+  100% { opacity: .0; }
+}
+@-moz-keyframes foglayer_02_opacity {
+  0% { opacity: .0; }
+  25% { opacity: .4; }
+  50% { opacity: .1; }
+  80% { opacity: .5; }
+  100% { opacity: .0; }
+}
+@-o-keyframes foglayer_02_opacity {
+  0% { opacity: .0; }
+  25% { opacity: .5; }
+  50% { opacity: .1; }
+  80% { opacity: .4; }
+  100% { opacity: .0; }
+}
+@keyframes foglayer_02_opacity {
+  0% { opacity: .0; }
+  25% { opacity: .3; }
+  50% { opacity: .1; }
+  80% { opacity: .5; }
+  100% { opacity: .0; }
+}
+/* ---------- Keyframe Layer 3 ---------- */
+@-webkit-keyframes foglayer_03_opacity {
+  0% { opacity: .0 }
+  27% { opacity: .5; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .0; }
+}
+@-moz-keyframes foglayer_03_opacity {
+  0% { opacity: .0 }
+  27% { opacity: .3; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .0; }
+}
+@-o-keyframes foglayer_03_opacity {
+  0% { opacity: .0 }
+  27% { opacity: .3; }
+  52% { opacity: .5; }
+  68% { opacity: .3; }
+  100% { opacity: .0; }
+}
+@keyframes foglayer_03_opacity {
+  0% { opacity: .0; }
+  27% { opacity: .4; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .0; }
+}
+/* ---------- Keyframe moveMe ---------- */
+@-webkit-keyframes foglayer_moveme {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+@-moz-keyframes foglayer_moveme {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+@-o-keyframes foglayer_moveme {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+@keyframes foglayer_moveme {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+@media only screen
+  and (min-width: 280px)
+  and (max-width: 767px) {
+    #foglayer_01 .image01, #foglayer_01 .image02,
+    #foglayer_02 .image01, #foglayer_02 .image02,
+    #foglayer_03 .image01, #foglayer_03 .image02 {
+      width: 100%;
+    }
+  }
+
+.positionAb {
+    position: absolute;
+}
+
+
+
+#cta{
+      width: 300px; 
+    height: 250px;
+    left: 0px;
+    top: 0px;
+}
+
+#cta img{
+      width: 300px; 
+    height: 250px;
+    left: 0px;
+    top: 0px;
+      transform-origin: 282px 16px 0px;
+}
+
+#monja-container{
+      width: 300px; 
+    height: 250px;
+    left: 0px;
+    top: 0px;
+}
+
+  #clouds{
+    width: 500px; 
+    height: 250px;
+    left: 0px;
+    top: 0px;
+   /* opacity: 0.5;*/
+  }
+
+  #habit{
+    width: 300px; 
+    height: 250px;
+    left: 0px;
+    top: 0px;
+  }
+
+
+  #cruz{
+    width: 300px; 
+    height: 250px;
+    left: 0px;
+    top: 0px;
+    transform-origin: 171.296px 134.259px 0px;
+  }
+
+  #arm{
+    width: 300px; 
+    height: 250px;
+    left: 0px;
+    top: 0px;
+    transform-origin: 141.204px 153.356px 0px;
+  }
+
+  #soga{
+    width: 300px; 
+    height: 250px;
+    left: 0px;
+    top: 0px;
+    transform-origin: 121.528px 116.898px 0px;
+  }
+
+  #bg, #bg2, #nun{
+    width: 300px; 
+    height: 250px;
+    left: 0px;
+    top: 0px;
+  }
+
+#fogInt {
+    width: 300px;
+    height: 250px;
+}
+
+#fogInt2 {
+    width: 300px;
+    height: 250px;
+    opacity: 1;
+}
+
+  #cruz img, #arm img, #soga img, #bg img, #bg2 img, #nun img, #habit img {
+    width: 300px; 
+    height: 250px; 
+  }
+
