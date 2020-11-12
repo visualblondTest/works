@@ -633,8 +633,8 @@ set:function(a){this.a.height=a}},width:{configurable:!0,enumerable:!0,get:funct
       exit.disabled = true;
 
       let formData = new FormData();
-      formData.set('name', document.getElementById('input_name').value);
-      formData.set('phone_no', document.getElementById('input_phone').value);
+      formData.set('name', document.getElementById('name').value);
+      formData.set('phone_no', document.getElementById('phone_no').value);
       fetch(scriptURL, {
           method: 'POST',
           body: formData
