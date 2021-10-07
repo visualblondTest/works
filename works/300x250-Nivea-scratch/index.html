@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJle20ba9765be820ebc3e3560de900f767"/>
+<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJlb2e7f31c62135abd15a02f72b50876bc"/>
   <meta charset="utf-8">
   <meta name="generator" content="Google Web Designer 14.0.2.0928">
   <meta name="template" content="Banner 3.0.0">
@@ -588,7 +588,7 @@ d.B=function(a){var b=this.getAttribute("exit-id"),h=this.getAttribute("product-
        * fired when the document has been completely loaded and parsed.
        */
       function handleDomContentLoaded(event) {
-
+          tl_init.restart();
       }
 
       /**
@@ -606,7 +606,11 @@ d.B=function(a){var b=this.getAttribute("exit-id"),h=this.getAttribute("product-
        * Handles the event that is dispatched after the Ad has been
        * initialized and before the default page of the Ad is shown.
        */
-      function handleAdInitialized(event) {}
+      function handleAdInitialized(event) {
+        
+         tl_init.restart();
+        
+      }
 
       window.addEventListener('DOMContentLoaded',
         handleDomContentLoaded, false);
