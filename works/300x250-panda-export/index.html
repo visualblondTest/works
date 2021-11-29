@@ -415,21 +415,21 @@ function animPhone () {
 
  
 
-    if (nameWrap.DeviceOrientationEvent) {
+    if (window.DeviceOrientationEvent) {
       // this device has a gyroscope, use deviceOrientation
       if (typeof DeviceOrientationEvent.requestPermission === "function") {
         DeviceOrientationEvent.requestPermission()
           .then((permissionState) => {
             if (permissionState === "granted") {
-              nameWrap.addEventListener("deviceorientation", deviceOrientation);
+              window.addEventListener("deviceorientation", deviceOrientation);
             }
           })
           .catch(console.error);
       } else {
         // just add the event listener
-        nameWrap.addEventListener("deviceorientation", deviceOrientation);
+        window.addEventListener("deviceorientation", deviceOrientation);
       }
-    } else if (nameWrap.DeviceMotionEvent) {
+    } else if (window.DeviceMotionEvent) {
       // this device has only an accelerometer, use deviceMotion
       if (typeof DeviceMotionEvent.requestPermission === "function") {
         // iOS 12+ needs permission (from a clickable element)
