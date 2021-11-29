@@ -319,6 +319,8 @@ d.B=function(a){var b=this.getAttribute("exit-id"),h=this.getAttribute("product-
 // https://mobiforge.com/design-development/html5-mobile-web-device-orientation-events
 
 function rotateImage(x, y) {
+  var img = document.getElementById("img");
+
   // rotates in degrees around x/y/z axis (0…360°)
   var rotation = "translate(" + x + "px" + "," + y + "px) ";
  // translate(10px, 10px);
@@ -451,6 +453,7 @@ function animPhone () {
 // also add mouse events
 nameWrap.addEventListener("mousemove", inputMove);
 nameWrap.addEventListener('touchmove', inputMove);
+
 </script>
   <script type="text/javascript" id="gwd-init-code">
     var tl_Global = gsap.timeline();
