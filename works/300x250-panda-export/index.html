@@ -356,8 +356,8 @@ function inputMove(e) {
     x = e.pageX;
     y = e.pageY;
   }
-  var alpha = (x / window.innerWidth) * 10;
-  var beta = (y / window.innerHeight) * 10;
+  var alpha = (x / window.innerWidth) * 50;
+  var beta = (y / window.innerHeight) * 50;
   rotateImage(alpha, beta);
 }
 
@@ -405,38 +405,42 @@ document
   });
 
 */
+var nameWrap = document.getElementById("page1");
 
 function animPhone () {
     // requesting for permission on iOS 12+
     // https://dev.to/li/how-to-requestpermission-for-devicemotion-and-deviceorientation-events-in-ios-13-46g2
-    if (window.DeviceOrientationEvent) {
+
+ 
+
+    if (nameWrap.DeviceOrientationEvent) {
       // this device has a gyroscope, use deviceOrientation
       if (typeof DeviceOrientationEvent.requestPermission === "function") {
         DeviceOrientationEvent.requestPermission()
           .then((permissionState) => {
             if (permissionState === "granted") {
-              window.addEventListener("deviceorientation", deviceOrientation);
+              nameWrap.addEventListener("deviceorientation", deviceOrientation);
             }
           })
           .catch(console.error);
       } else {
         // just add the event listener
-        window.addEventListener("deviceorientation", deviceOrientation);
+        nameWrap.addEventListener("deviceorientation", deviceOrientation);
       }
-    } else if (window.DeviceMotionEvent) {
+    } else if (nameWrap.DeviceMotionEvent) {
       // this device has only an accelerometer, use deviceMotion
       if (typeof DeviceMotionEvent.requestPermission === "function") {
         // iOS 12+ needs permission (from a clickable element)
         DeviceMotionEvent.requestPermission()
           .then((permissionState) => {
             if (permissionState === "granted") {
-              window.addEventListener("devicemotion", deviceMotion);
+              nameWrap.addEventListener("devicemotion", deviceMotion);
             }
           })
           .catch(console.error);
       } else {
         // just add the event listener
-        window.addEventListener("devicemotion", deviceMotion);
+        nameWrap.addEventListener("devicemotion", deviceMotion);
       }
     }
   };
@@ -445,8 +449,8 @@ function animPhone () {
 
 // no orientation, no motion, so mimick with touch/mouse
 // also add mouse events
-window.addEventListener("mousemove", inputMove);
-window.addEventListener('touchmove', inputMove);
+nameWrap.addEventListener("mousemove", inputMove);
+nameWrap.addEventListener('touchmove', inputMove);
 </script>
   <script type="text/javascript" id="gwd-init-code">
     var tl_Global = gsap.timeline();
