@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl0cf14a895edcdcc47c5d5e8abe97a415"/>
+<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl4dad0185e9776a8790dbf869be8e4c83"/>
   <meta charset="utf-8">
   <meta name="generator" content="Google Web Designer 14.0.4.1108">
   <meta name="template" content="Banner 3.0.0">
@@ -342,7 +342,7 @@ function deviceMotion(e) {
   // Convert value from acceleration to degrees
   // on earth this is 9.81 (Earth Gravity) => percentage => degrees
   var tiltLR = Math.round((acceleration.x / 9.81) * -90);
-  var tiltTB = Math.round(((acceleration.y + 9.81) / 9.81) * 20 * facingUp);
+  var tiltTB = Math.round(((acceleration.y + 9.81) / 9.81) * 90 * facingUp);
   rotateImage(tiltLR, tiltTB);
 }
 
@@ -364,6 +364,8 @@ function inputMove(e) {
 
 
 // register events
+
+/*
 
 document
   .getElementById("permissionButton")
@@ -402,7 +404,44 @@ document
     }
   });
 
-  
+*/
+
+function animPhone () {
+    // requesting for permission on iOS 12+
+    // https://dev.to/li/how-to-requestpermission-for-devicemotion-and-deviceorientation-events-in-ios-13-46g2
+    if (window.DeviceOrientationEvent) {
+      // this device has a gyroscope, use deviceOrientation
+      if (typeof DeviceOrientationEvent.requestPermission === "function") {
+        DeviceOrientationEvent.requestPermission()
+          .then((permissionState) => {
+            if (permissionState === "granted") {
+              window.addEventListener("deviceorientation", deviceOrientation);
+            }
+          })
+          .catch(console.error);
+      } else {
+        // just add the event listener
+        window.addEventListener("deviceorientation", deviceOrientation);
+      }
+    } else if (window.DeviceMotionEvent) {
+      // this device has only an accelerometer, use deviceMotion
+      if (typeof DeviceMotionEvent.requestPermission === "function") {
+        // iOS 12+ needs permission (from a clickable element)
+        DeviceMotionEvent.requestPermission()
+          .then((permissionState) => {
+            if (permissionState === "granted") {
+              window.addEventListener("devicemotion", deviceMotion);
+            }
+          })
+          .catch(console.error);
+      } else {
+        // just add the event listener
+        window.addEventListener("devicemotion", deviceMotion);
+      }
+    }
+  };
+
+  animPhone();
 
 // no orientation, no motion, so mimick with touch/mouse
 // also add mouse events
