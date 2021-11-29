@@ -343,8 +343,8 @@ function deviceMotion(e) {
   var facingUp = acceleration.z > 0 ? +1 : -1;
   // Convert value from acceleration to degrees
   // on earth this is 9.81 (Earth Gravity) => percentage => degrees
-  var tiltLR = Math.round((acceleration.x / 9.81) * -30);
-  var tiltTB = Math.round(((acceleration.y + 9.81) / 9.81) * 30 * facingUp);
+  var tiltLR = Math.round((acceleration.x / 9.81) * -10);
+  var tiltTB = Math.round(((acceleration.y + 9.81) / 9.81) * 10 * facingUp);
   rotateImage(tiltLR, tiltTB);
 }
 
@@ -358,8 +358,8 @@ function inputMove(e) {
     x = e.pageX;
     y = e.pageY;
   }
-  var alpha = (x / window.innerWidth) * 50;
-  var beta = (y / window.innerHeight) * 50;
+  var alpha = (x / window.innerWidth) * 10;
+  var beta = (y / window.innerHeight) * 10;
   rotateImage(alpha, beta);
 }
 
